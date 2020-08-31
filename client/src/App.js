@@ -1,10 +1,12 @@
 import React from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
+import Home from './routes/Home';
 
 const App = () => {
     return(
-        <div>
-            Hi I'm Su Latt!
-        </div>
+        <BrowserRouter>
+            <Route path="/" component={Home} />
+        </BrowserRouter>
     );
 };
 
