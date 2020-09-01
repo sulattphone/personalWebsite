@@ -1,0 +1,47 @@
+/************** Universal ***********/
+
+.page {
+
+}
+
+
+
+#darkOverlay {
+    background-color: #52575d;
+    opacity: 0.3;
+}
+
+
+/********** End Universal *********/
+
+
+/********** Home ****************/
+
+#homePage {
+    background-image: url(https://drive.google.com/uc?/export=view&id=1P1Rs7gDs65uo7_odr-LTIjmkLAFTacqO);
+    background-position-x: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.home-page-title {
+    color: #41444b;
+    font-size: 3rem;
+}
+
+.home-page-img {
+    width: 10rem;
+    margin: 2rem auto;
+}
+
+.carousel-img-div {
+    width: 100%;
+    height: 100vh;
+}
+
+.carousel-subTitle-div {
+    width: 50%;
+    margin: 0 auto;
+}
+
+/********** End Home ************/
