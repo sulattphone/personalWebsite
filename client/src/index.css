@@ -1,10 +1,14 @@
 /************** Universal ***********/
+@import url('https://fonts.googleapis.com/css2?family=Marko+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 
 .page {
-
+    font-family: 'Asap', sans-serif;
 }
 
-
+.title {
+    font-family: 'Marko One', serif;
+}
 
 #darkOverlay {
     background-color: #52575d;
@@ -18,7 +22,7 @@
 /********** Home ****************/
 
 #homePage {
-    background-image: url(https://drive.google.com/uc?/export=view&id=1P1Rs7gDs65uo7_odr-LTIjmkLAFTacqO);
+    background-image: url(https://drive.google.com/uc?/export=view&id=1KcTU2HTxFPBSWj8xsF8TVv_A9TPQoxKR);
     background-position-x: center;
     background-size: cover;
     height: 100vh;
@@ -30,8 +34,10 @@
 }
 
 .home-page-img {
-    width: 10rem;
     margin: 2rem auto;
+    border-radius: 50%;
+    height: 8rem;
+    width: 8rem;
 }
 
 .carousel-img-div {
@@ -40,8 +46,44 @@
 }
 
 .carousel-subTitle-div {
-    width: 50%;
+    width: 100%;
     margin: 0 auto;
 }
+
+
+@media(min-width: 1400px) {
+    .carousel-subTitle-div {
+        width: 50% !important;
+    }
+}
+
+@media(min-width: 1024px) {
+    .carousel-subTitle-div {
+        width: 70%;
+        font-size: 1.9rem !important;
+    }
+    .home-carousel-title {
+        font-size: 3rem !important;
+    }
+    .home-page-img {
+        width: 17rem !important;
+        height: 17rem !important;
+    }
+}
+
+@media(min-width: 768px) {
+    .carousel-subTitle-div {
+        width: 80%;
+        font-size: 1.5rem;
+    }
+    .home-carousel-title {
+        font-size: 2.5rem;
+    }
+    .home-page-img {
+        width: 12rem;
+        height: 12rem;
+    }
+}
+
 
 /********** End Home ************/
