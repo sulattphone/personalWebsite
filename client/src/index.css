@@ -15,6 +15,19 @@
     opacity: 0.3;
 }
 
+.logo-img {
+    width: 3rem;
+    position: fixed;
+    top: 1rem;
+    left: 2rem;
+}
+
+@media(max-width: 575.98px) {
+    .logo-img {
+        width: 2.5rem;
+    }
+}
+
 
 /********** End Universal *********/
 
@@ -50,6 +63,26 @@
     margin: 0 auto;
 }
 
+#carouselPrev {
+    width: 3rem;
+    height: 3rem;
+}
+
+#carouselNext {
+    width: 3rem;
+    height: 3rem;
+}
+
+@media(max-width: 575.98px) {
+    #carouselPrev {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    #carouselNext {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
 
 @media(min-width: 1400px) {
     .carousel-subTitle-div {
@@ -87,3 +120,56 @@
 
 
 /********** End Home ************/
+
+
+/************* Navigation.css **************/
+.menu-item {
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    transition: 0.3s;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.menu-item:hover {
+    color: #FEEC79;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.bm-burger-button {
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+    width: 3rem;
+}
+
+.bm-cross-button {
+    width: 3rem;
+    right: 1rem;
+    top: 1rem;
+    position: fixed;
+}
+
+.bm-menu-wrap {
+    background-color: #41444b;
+    padding: 10rem 2rem 2rem 2rem;
+}
+
+@media(max-width: 575.98px) {
+    .bm-burger-button {
+        width: 2rem;
+    }
+    .bm-cross-button {
+        width: 2rem;
+    }
+    .bm-menu-wrap {
+        padding: 7rem 0.5rem 0.5rem 0.5rem;
+    }
+    .menu-item {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/************* Navigation ******************/

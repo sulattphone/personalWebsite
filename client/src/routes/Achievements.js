@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
+import '../index.css';
 
-class Education extends Component {
+class Achievements extends Component {
     render() {
         return(
             <div>
-                Education
+                Acheivements
             </div>
         );
     }
 }
 
-export default Education;
+export default Achievements;
