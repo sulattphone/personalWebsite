@@ -6,7 +6,7 @@ class Logo extends Component {
         return(
             <div>
                 <a href="/">
-                    <img className="logo-img" src="https://drive.google.com/uc?/export=view&id=1pJsgq7f-xC5wmrHf53X9o6_Yi2xMRI1D" />
+                    <img className="logo-img" src="https://drive.google.com/uc?/export=view&id=1pJsgq7f-xC5wmrHf53X9o6_Yi2xMRI1D" alt="logo" />
                 </a>
             </div>
         );
