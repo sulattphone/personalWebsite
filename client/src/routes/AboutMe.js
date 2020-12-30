@@ -2,6 +2,23 @@ import React, { Component } from 'react';
 import '../index.css';
 
 class AboutMe extends Component {
+
+    setSchoolSphereActive = (id) => {
+        var school0 = document.getElementById("schoolZero");
+        var school1 = document.getElementById("schoolOne");
+        var school2 = document.getElementById("schoolTwo");
+        var school3 = document.getElementById("schoolThree");
+
+        school0.classList.remove("active-school");
+        school1.classList.remove("active-school");
+        school2.classList.remove("active-school");
+        school3.classList.remove("active-school");
+
+
+        var element = document.getElementById(id);
+        element.classList.add("active-school");
+    }
+
     render() {
         return(
             <div>
@@ -12,13 +29,14 @@ class AboutMe extends Component {
                                 <div className="about-main-img-div"></div>
                                 <div className="about-main-intro-div">
                                     <p className="about-main-intro-text">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                                    It has survived not only five centuries, but also the leap into electronic typesetting, 
-                                    remaining essentially unchanged. It was popularised in the 1960s with the release of 
-                                    Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing 
-                                    software like Aldus PageMaker including versions of Lorem Ipsum.
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna 
+                                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                                    ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                                    Duis aute irure dolor in reprehenderit in voluptate velit 
+                                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
+                                    occaecat cupidatat non proident, sunt in culpa qui officia 
+                                    deserunt mollit anim id est laborum.
                                     </p>
                                 </div>
                                 <br />
@@ -29,16 +47,59 @@ class AboutMe extends Component {
                                     <br />
                                     <div className="row">
                                         <div className="col-lg-3">
-                                            <div className="about-main-edu-school">UC Berkeley</div>
+                                            <div className="about-main-edu-school 
+                                                            d-flex justify-content-center 
+                                                            align-items-center 
+                                                            sphere-berkeley
+                                                            active-school"
+                                                 id="schoolZero"
+                                                 onClick={()=>this.setSchoolSphereActive("schoolZero")}>
+                                                UC Berkeley
+                                            </div>
                                         </div>
                                         <div className="col-lg-3">
-                                            <div className="about-main-edu-school">College of San Mateo</div>
-                                        </div>
-                                        <div className="col-log-3">
-                                            <div className="about-main-edu-school">Horizon Int'l School</div>
+                                            <div className="about-main-edu-school 
+                                                                d-flex justify-content-center 
+                                                                align-items-center 
+                                                                sphere-berkeley"
+                                                 id="schoolOne"
+                                                    onClick={()=>this.setSchoolSphereActive("schoolOne")}>
+                                                    College of San Mateo
+                                            </div>
                                         </div>
                                         <div className="col-lg-3">
-                                            <div className="about-main-edu-school">B.E.P.P.S (3) Bahan</div>
+                                            <div className="about-main-edu-school 
+                                                            d-flex justify-content-center 
+                                                            align-items-center 
+                                                            sphere-berkeley"
+                                                 id="schoolTwo"
+                                                 onClick={()=>this.setSchoolSphereActive("schoolTwo")}>
+                                                Horizon International School
+                                            </div>    
+                                        </div>
+                                        <div className="col-lg-3">
+                                            <div className="about-main-edu-school 
+                                                            d-flex justify-content-center 
+                                                            align-items-center 
+                                                            sphere-berkeley"
+                                                 id="schoolThree"
+                                                 onClick={()=>this.setSchoolSphereActive("schoolThree")}>
+                                                B.E.P.P.S (3) BAHAN
+                                            </div>   
+                                        </div>
+                                    </div>
+                                    <div className="row">
+                                        <div className="col-lg-3" id="schoolIndicatorCol0">
+                                            
+                                        </div>
+                                        <div className="col-lg-3" id="schoolIndicatorCol1">
+
+                                        </div>
+                                        <div className="col-lg-3" id="schoolIndicatorCol2">
+
+                                        </div>
+                                        <div className="col-lg-3" id="schoolIndicatorCol3">
+
                                         </div>
                                     </div>
                                 </div>
