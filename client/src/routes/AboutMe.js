@@ -3,7 +3,7 @@ import '../index.css';
 
 class AboutMe extends Component {
 
-    setSchoolSphereActive = (id) => {
+    setSchoolSphereActive = (id, infoId) => {
         var school0 = document.getElementById("schoolZero");
         var school1 = document.getElementById("schoolOne");
         var school2 = document.getElementById("schoolTwo");
@@ -17,6 +17,19 @@ class AboutMe extends Component {
 
         var element = document.getElementById(id);
         element.classList.add("active-school");
+
+        var schoolInfo0 = document.getElementById("schoolInfoBerkeley");
+        var schoolInfo1 = document.getElementById("schoolInfoCSM");
+        var schoolInfo2 = document.getElementById("schoolInfoHorizon");
+        var schoolInfo3 = document.getElementById("schoolInfoBEPPS");
+
+        schoolInfo0.classList.add("display-none");
+        schoolInfo1.classList.add("display-none");
+        schoolInfo2.classList.add("display-none");
+        schoolInfo3.classList.add("display-none");
+
+        var infoElement = document.getElementById(infoId);
+        infoElement.classList.remove("display-none");
     }
 
     render() {
@@ -53,7 +66,7 @@ class AboutMe extends Component {
                                                             sphere-berkeley
                                                             active-school"
                                                  id="schoolZero"
-                                                 onClick={()=>this.setSchoolSphereActive("schoolZero")}>
+                                                 onClick={()=>this.setSchoolSphereActive("schoolZero", "schoolInfoBerkeley")}>
                                                 UC Berkeley
                                             </div>
                                         </div>
@@ -63,7 +76,7 @@ class AboutMe extends Component {
                                                                 align-items-center 
                                                                 sphere-berkeley"
                                                  id="schoolOne"
-                                                    onClick={()=>this.setSchoolSphereActive("schoolOne")}>
+                                                    onClick={()=>this.setSchoolSphereActive("schoolOne", "schoolInfoCSM")}>
                                                     College of San Mateo
                                             </div>
                                         </div>
@@ -73,7 +86,7 @@ class AboutMe extends Component {
                                                             align-items-center 
                                                             sphere-berkeley"
                                                  id="schoolTwo"
-                                                 onClick={()=>this.setSchoolSphereActive("schoolTwo")}>
+                                                 onClick={()=>this.setSchoolSphereActive("schoolTwo", "schoolInfoHorizon")}>
                                                 Horizon International School
                                             </div>    
                                         </div>
@@ -83,7 +96,7 @@ class AboutMe extends Component {
                                                             align-items-center 
                                                             sphere-berkeley"
                                                  id="schoolThree"
-                                                 onClick={()=>this.setSchoolSphereActive("schoolThree")}>
+                                                 onClick={()=>this.setSchoolSphereActive("schoolThree", "schoolInfoBEPPS")}>
                                                 B.E.P.P.S (3) BAHAN
                                             </div>   
                                         </div>
@@ -102,6 +115,55 @@ class AboutMe extends Component {
 
                                         </div>
                                     </div>
+                                    <div className="school-info-div">
+                                        <span id="schoolInfoBerkeley">
+                                                BERKELEY - Lorem ipsum BERKELEY BERKELEY iscing elit, 
+                                            sed do eiusmod tempor incididunt ut labore et dolore magna 
+                                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                                            ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                                            Duis aute irure dolor in reprehenderit in voluptate velit 
+                                            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
+                                            occaecat cupidatat non proident, sunt in culpa qui officia 
+                                            deserunt mollit anim id est laborum.
+                                        </span>
+                                        <span className="display-none" id="schoolInfoCSM">
+                                                CSM - Lorem ipsum dolor CSM amet, CSM elit, 
+                                            sed do eiusmod tempor CSM ut labore et dolore magna 
+                                            aliqua. Ut enim ad CSM veniam, quis nostrud exercitation 
+                                            ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                                            Duis aute irure dolor in reprehenderit in voluptate velit 
+                                            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
+                                            occaecat cupidatat non proident, sunt in culpa qui officia 
+                                            deserunt mollit anim id est laborum.
+                                        </span>
+                                        <span className="display-none" id="schoolInfoHorizon">
+                                                HORIZON - Lorem ipsum dolor HORIZON amet, cHORIZON elit, 
+                                            sed do eiusmod tempor incididunt ut labore et dolore magna 
+                                            aliqua. Ut enim ad HORIZON veniam, quis HORIZON exercitation 
+                                            ullamco HORIZON nisi ut aliquip ex ea commodo consequat. 
+                                            Duis aute irure dolor in HORIZON in voluptate velit 
+                                            esse cillum HORIZON eu fugiat nulla pariatur. Excepteur sint 
+                                            occaecat cupidatat non proident, sunt in culpa qui officia 
+                                            deserunt mollit anim id est laborum.
+                                        </span>
+                                        <span className="display-none" id="schoolInfoBEPPS">
+                                                BEPPS - Lorem ipsum dolor sit amet, BEPPS adipiscing elit, 
+                                            sed do eiusmod tempor incididunt ut labore et BEPPS magna 
+                                            aliqua. Ut enim ad minim BEPPS, quis nostrud exercitation 
+                                            ullamco BEPPS nisi ut aliquip ex ea commodo consequat. 
+                                            Duis aute irure dolor in BEPPS in voluptate velit 
+                                            esse BEPPS dolore eu BEPPS nulla pariatur. Excepteur sint 
+                                            occaecat cupidatat non proident, sunt in culpa qui officia 
+                                            deserunt mollit anim id est laborum.
+                                        </span>
+
+                                    </div>
+                                </div>
+                                <br />
+                                <div className="about-main-achievement-div">
+                                    <h3>
+                                        Achievements
+                                    </h3>
                                 </div>
                             </div>
                         </div>

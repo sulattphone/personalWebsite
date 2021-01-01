@@ -45,7 +45,6 @@ class Navigation extends Component {
                 <NavLink to='/about' id="about" className="menu-item" onClick={this.closeMenu}>About Me</NavLink>
                 <NavLink to='/experiences' id="experiences" className="menu-item" onClick={this.closeMenu}>Experience</NavLink>
                 <NavLink to='/projects' id="projects" className="menu-item" onClick={this.closeMenu}>Personal Projects</NavLink>
-                <NavLink to='/achievements' id="achievements" className="menu-item" onClick={this.closeMenu}>Achievements</NavLink>
                 <NavLink to='/blog' id="blog" className="menu-item" onClick={this.closeMenu}>Personal Blog</NavLink>
                 
             </Menu>

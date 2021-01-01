@@ -57,7 +57,7 @@ class Home extends Component {
                   </div>
                 </div>
               </div>
-              <div className="carousel-item">
+              {/* <div className="carousel-item">
                 <div className="carousel-img-div"></div>
                 <div className="carousel-caption d-block">
                 <img src="https://drive.google.com/uc?/export=view&id=1E-adWEJKzrRwKRTcvKIFvLiMpflAhDnm" className="d-block home-page-img" alt="..." />
@@ -66,7 +66,7 @@ class Home extends Component {
                     <p>Proud to present my achievements throughout life that have encouraged me to strive higher.</p>
                   </div>
                 </div>
-              </div>
+              </div> */}
               <div className="carousel-item">
                 <div className="carousel-img-div"></div>
                 <div className="carousel-caption d-block">
