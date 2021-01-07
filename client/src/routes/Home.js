@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import '../index.css';
-
+import myPic from '../images/my-pic.jpeg';
+import carouselMeImg from '../images/home-carousel-me.jpg';
+import carouselExperienceImg from '../images/home-carousel-experience.jpg';
+import carouselProjectsImg from '../images/home-carousel-projects.jpg';
+import carouselBlogImg from '../images/home-carousel-blog.jpg';
 
 class Home extends Component {
   render() {
@@ -20,7 +24,7 @@ class Home extends Component {
               <div className="carousel-item active">
                 <div className="carousel-img-div"></div>
                 <div className="carousel-caption d-block">
-                  <img src="https://drive.google.com/uc?/export=view&id=1PxnAFY-hedXyR3Mi5-cSYGCP_MSlAnA0" className="d-block home-page-img" alt="..." />
+                  <img src={myPic} className="d-block home-page-img" alt="..." />
                   <h4 className="title home-carousel-title">Su Latt Phone</h4>
                   <div className="carousel-subTitle-div">
                     <p>Hi I’m Su Latt. Welcome! Whoever you are, I hope you get something out of visiting my website!</p>
@@ -30,7 +34,7 @@ class Home extends Component {
               <div className="carousel-item">
                 <div className="carousel-img-div"></div>
                 <div className="carousel-caption d-block">
-                  <img src="https://drive.google.com/uc?/export=view&id=1rZU4paIgTOAYqHaZrHfuxkqjdELxeyBy" className="d-block home-page-img" alt="..." />
+                  <img src={carouselMeImg} className="d-block home-page-img" alt="..." />
                   <h4 className="title home-carousel-title">About Me</h4>
                   <div className="carousel-subTitle-div">
                     <p>Read about me! What I’m like as a software engineer, as a student, as a woman, and as a person.</p>
@@ -40,7 +44,7 @@ class Home extends Component {
               <div className="carousel-item">
                 <div className="carousel-img-div"></div>
                 <div className="carousel-caption d-block">
-                <img src="https://drive.google.com/uc?/export=view&id=18DMuhZwkWBLA1zoHiKvBBU7SLFCT6S2d" className="d-block home-page-img" alt="..." />
+                <img src={carouselExperienceImg} className="d-block home-page-img" alt="..." />
                   <h4 className="title home-carousel-title">Experience</h4>
                   <div className="carousel-subTitle-div">
                     <p>Come learn about my work experiences so far! Ranging from part-time jobs to internships.</p>
@@ -50,7 +54,7 @@ class Home extends Component {
               <div className="carousel-item">
                 <div className="carousel-img-div"></div>
                 <div className="carousel-caption d-block">
-                <img src="https://drive.google.com/uc?/export=view&id=1cpyBAWcrND6zyi2P_-BOMr5O6cvL-Zkj" className="d-block home-page-img" alt="..." />
+                <img src={carouselProjectsImg} className="d-block home-page-img" alt="..." />
                   <h4 className="title home-carousel-title">Personal Projects</h4>
                   <div className="carousel-subTitle-div">
                     <p>Here I present details about some of the personal projects I’ve done. Mostly technical, but others too!</p>
@@ -70,7 +74,7 @@ class Home extends Component {
               <div className="carousel-item">
                 <div className="carousel-img-div"></div>
                 <div className="carousel-caption d-block">
-                <img src="https://drive.google.com/uc?/export=view&id=1lBRKI2S9mc3rukYJzn-a-8e1-k_N84vW" className="d-block home-page-img" alt="..." />
+                <img src={carouselBlogImg} className="d-block home-page-img" alt="..." />
                 <h4 className="title home-carousel-title">Personal Blog</h4>
                 <div className="carousel-subTitle-div">
                   <p>Just a safe space to express myself. Hope it's thought-provoking and entertaining for you!</p>

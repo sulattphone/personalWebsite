@@ -60,7 +60,7 @@
 /********** Home ****************/
 
 #homePage {
-    background-image: url(https://drive.google.com/uc?/export=view&id=1KcTU2HTxFPBSWj8xsF8TVv_A9TPQoxKR);
+    background-image: url(./images/home-background.jpg);
     background-position-x: center;
     background-size: cover;
     height: 100vh;
@@ -202,7 +202,7 @@
 /************* About.css ********************/
 
 .container-top-padding {
-    padding-top: 5rem;
+    padding-top: 3rem;
     min-height: 100vh;
 }
 
@@ -218,14 +218,14 @@
     height: 35rem;
     border-radius: 40px;
     position: sticky;
-    top: 5rem;
+    top: 3rem;
     padding: 1rem;
 }
 
 .about-main-img-div {
     width: 100%;
     height: 15rem;
-    background-image: url(https://drive.google.com/uc?/export=view&id=1Yxry-MyGwyNKGdGRslgvpEOsGtqd6RYB);
+    background-image: url(./images/graduation-cap.jpg);
     background-position: top;
     background-size: cover;
     border-radius: 40px 40px 0px 0px;
@@ -234,7 +234,7 @@
 .about-side-img-div {
     width: 12rem;
     height: 12rem;
-    background-image: url(https://drive.google.com/uc?/export=view&id=1PxnAFY-hedXyR3Mi5-cSYGCP_MSlAnA0);
+    background-image: url(./images/my-pic.jpeg);
     background-position: center;
     background-size: contain;
     border-radius: 50%;
