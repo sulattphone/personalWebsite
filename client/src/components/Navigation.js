@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { slide as Menu } from 'react-burger-menu';
 import { NavLink } from 'react-router-dom';
+import navIconImg from '../images/navIcon.png';
+import crossIconImg from '../images/crossIcon.png';
 import '../index.css';
 
 class Navigation extends Component {
@@ -11,21 +12,20 @@ class Navigation extends Component {
         };
         this.openMenu = this.openMenu.bind(this);
         this.closeMenu = this.closeMenu.bind(this);
-        this.handleStateChange = this.handleStateChange.bind(this);
         this.toggleMenu = this.toggleMenu.bind(this);
 
     }
 
     openMenu() {
+        var side = document.getElementById("sideBar");
+        side.classList.remove("sideNavHide");
         this.setState({menuOpen: true});
     }
 
     closeMenu() {
+        var side = document.getElementById("sideBar");
+        side.classList.add("sideNavHide");
         this.setState({menuOpen: false});
-    }
-
-    handleStateChange(state) {
-        this.setState({menuOpen: state.isOpen});
     }
 
     toggleMenu() {
@@ -34,20 +34,32 @@ class Navigation extends Component {
 
     render() {
         return(
-            <Menu right
-             width={'40%'}
-             customBurgerIcon={<img src="https://drive.google.com/uc?/export=view&id=1sT_ohwdyDLJdwQg47FqHo7IduNnBcLua" />}
-             customCrossIcon={<img src="https://drive.google.com/uc?/export=view&id=1TidVblJz2GepZ7DdqPeqkA8sZBdfuP6L" /> }
-             isOpen={this.state.menuOpen}
-             onStateChange={(state)=>this.handleStateChange(state)}
-             >
-                <NavLink to='/' id="home" className="menu-item" onClick={this.closeMenu}>Home</NavLink>
-                <NavLink to='/about' id="about" className="menu-item" onClick={this.closeMenu}>About Me</NavLink>
-                <NavLink to='/experiences' id="experiences" className="menu-item" onClick={this.closeMenu}>Experience</NavLink>
-                <NavLink to='/projects' id="projects" className="menu-item" onClick={this.closeMenu}>Personal Projects</NavLink>
-                <NavLink to='/blog' id="blog" className="menu-item" onClick={this.closeMenu}>Personal Blog</NavLink>
-                
-            </Menu>
+            <div>
+                <img className="navIcon" src={navIconImg} onClick={this.openMenu} />
+                <div className="sideNav sideNavHide" id="sideBar">
+                    <img className="navCloseIcon" src={crossIconImg} onClick={this.closeMenu} />
+                    <div className="navItemsDiv">
+                        <ul className="navItemsList">
+                            <li className="menu-item">
+                                <NavLink to='/' className="menu-item" onClick={this.closeMenu}>Home</NavLink>
+                            </li>
+                            <li className="menu-item">
+                                <NavLink to='/about' className="menu-item" onClick={this.closeMenu}>About Me</NavLink>
+                            </li>
+                            <li className="menu-item">
+                                <NavLink to='/experiences' className="menu-item" onClick={this.closeMenu}>Experiences</NavLink>
+                            </li>
+                            <li className="menu-item">
+                                <NavLink to='/projects' className="menu-item" onClick={this.closeMenu}>Personal Projects</NavLink>
+                            </li>
+                            <li className="menu-item">
+                                <NavLink to='/blog' className="menu-item" onClick={this.closeMenu}>Blog</NavLink>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
         );
         
     }

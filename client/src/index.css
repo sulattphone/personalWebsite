@@ -47,6 +47,10 @@
     display: none;
 }
 
+.white-font {
+    color: #FFFFFF;
+}
+
 @media(max-width: 575.98px) {
     .logo-img {
         width: 2.5rem;
@@ -148,6 +152,40 @@
 
 
 /************* Navigation.css **************/
+
+.navIcon {
+    width: 3rem;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 20;
+    cursor: pointer;
+}
+
+.navCloseIcon {
+    width: 1.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.sideNav {
+    width: 17rem;
+    height: 100vh;
+    position: fixed;
+    background-color: #52575d;
+    right: 0rem;
+    z-index: 20;
+    transition: 0.3s;
+    padding: 7rem 1rem 1rem 1rem;
+}
+
+.sideNavHide {
+    margin-right: -17rem;
+    transition: 0.3s;
+}
+
 .menu-item {
     color: #FFFFFF;
     font-size: 1.5rem;
@@ -162,38 +200,20 @@
     font-size: 2rem;
 }
 
-.bm-burger-button {
-    position: fixed;
-    right: 1rem;
-    top: 1rem;
-    width: 3rem;
+.navItemsDiv {
+    margin: auto;
 }
 
-.bm-cross-button {
-    width: 3rem;
-    right: 1rem;
-    top: 1rem;
-    position: fixed;
+.navItemsList {
+    padding: 0;
+    list-style-type: none;
 }
 
-.bm-menu-wrap {
-    background-color: #41444b;
-    padding: 10rem 2rem 2rem 2rem;
-}
 
 @media(max-width: 575.98px) {
-    .bm-burger-button {
-        width: 2rem;
-    }
-    .bm-cross-button {
-        width: 2rem;
-    }
-    .bm-menu-wrap {
-        padding: 7rem 0.5rem 0.5rem 0.5rem;
-    }
     .menu-item {
-        font-size: 1rem;
-        margin-bottom: 1rem;
+        font-size: 1.3rem;
+        margin-bottom: 1.3rem;
     }
 }
 
