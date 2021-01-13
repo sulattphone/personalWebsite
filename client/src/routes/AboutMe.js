@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import FlipCard from '../components/FlipCard';
+import AchievementsList from '../json/achievements.json';
 import '../index.css';
 
 class AboutMe extends Component {
@@ -164,6 +166,21 @@ class AboutMe extends Component {
                                     <h3>
                                         Achievements
                                     </h3>
+                                    <div className="achievements-div">
+                                        <div className="row row-fix justify-content-center">
+                                            {AchievementsList["achievements"].map(a => {
+                                                return(
+                                                    <div className="col-md-4">
+                                                        <FlipCard
+                                                         title={a.title}
+                                                         description={a.description}
+                                                         height="15rem"
+                                                         frontBgColor="#FEEC79" />
+                                                    </div>
+                                                );
+                                            })}
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
