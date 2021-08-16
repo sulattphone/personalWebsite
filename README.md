@@ -1,5 +1,5 @@
 # personalWebsite
-Personal Website using the MERN stack (MongoDB, Express, React, Node.js)
+My personal website using the MERN stack (MongoDB, Express, React, Node.js) for technology and figma for design.
 
 Contains:
 - About Me
