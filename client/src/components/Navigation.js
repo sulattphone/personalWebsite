@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import navIconImg from '../images/navIcon.png';
-import crossIconImg from '../images/crossIcon.png';
+import navCloseIcon from '../images/navCloseIcon.png';
 import '../index.css';
 
 class Navigation extends Component {
@@ -19,12 +19,16 @@ class Navigation extends Component {
     openMenu() {
         var side = document.getElementById("sideBar");
         side.classList.remove("sideNavHide");
+        var navIcon = document.getElementById("navIconClick");
+        navIcon.classList.add("display-none");
         this.setState({menuOpen: true});
     }
 
     closeMenu() {
         var side = document.getElementById("sideBar");
         side.classList.add("sideNavHide");
+        var navIcon = document.getElementById("navIconClick");
+        navIcon.classList.remove("display-none");
         this.setState({menuOpen: false});
     }
 
@@ -35,26 +39,27 @@ class Navigation extends Component {
     render() {
         return(
             <div>
-                <img className="navIcon" src={navIconImg} onClick={this.openMenu} />
+                <img className="navIcon" id="navIconClick" src={navIconImg} onClick={this.openMenu} />
                 <div className="sideNav sideNavHide" id="sideBar">
-                    <img className="navCloseIcon" src={crossIconImg} onClick={this.closeMenu} />
+                    <img className="navCloseIcon" src={navCloseIcon} onClick={this.closeMenu} />
                     <div className="navItemsDiv">
                         <ul className="navItemsList">
-                            <li className="menu-item">
-                                <NavLink to='/' className="menu-item" onClick={this.closeMenu}>Home</NavLink>
-                            </li>
-                            <li className="menu-item">
-                                <NavLink to='/about' className="menu-item" onClick={this.closeMenu}>About Me</NavLink>
-                            </li>
-                            <li className="menu-item">
-                                <NavLink to='/experiences' className="menu-item" onClick={this.closeMenu}>Experiences</NavLink>
-                            </li>
-                            <li className="menu-item">
-                                <NavLink to='/projects' className="menu-item" onClick={this.closeMenu}>Personal Projects</NavLink>
-                            </li>
-                            <li className="menu-item">
-                                <NavLink to='/blog' className="menu-item" onClick={this.closeMenu}>Blog</NavLink>
-                            </li>
+                            <NavLink to='/' className="menu-item" onClick={this.closeMenu}>
+                                <li  className="menu-item">Home</li>
+                            </NavLink>
+                            <NavLink to='/about' className="menu-item" onClick={this.closeMenu}>
+                                <li  className="menu-item">About</li>
+                            </NavLink>
+                            <NavLink to='/experiences' className="menu-item" onClick={this.closeMenu}>
+                                <li  className="menu-item">Experiences</li>
+                            </NavLink>
+                            <NavLink to='/projects' className="menu-item" onClick={this.closeMenu}>
+                                <li  className="menu-item">Projects</li>
+                            </NavLink>
+                            <NavLink to='/blog' className="menu-item" onClick={this.closeMenu}>
+                                <li  className="menu-item">Blog</li>
+                            </NavLink>
+                            
                         </ul>
                     </div>
                 </div>
