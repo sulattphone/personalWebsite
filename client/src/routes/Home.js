@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import '../index.css';
 import myPic from '../images/my-pic.jpeg';
 import carouselMeImg from '../images/home-carousel-me.jpg';
@@ -34,8 +35,12 @@ class Home extends Component {
               <div className="carousel-item">
                 <div className="carousel-img-div"></div>
                 <div className="carousel-caption d-block">
-                  <img src={carouselMeImg} className="d-block home-page-img" alt="..." />
-                  <h4 className="title home-carousel-title">About Me</h4>
+                  <Link to="/about">
+                    <img src={carouselMeImg} className="d-block home-page-img" alt="..." />
+                  </Link>
+                  <Link to="/about" className="link home-carousel-link">
+                    <h4 className="title home-carousel-title">About Me</h4>
+                  </Link>
                   <div className="carousel-subTitle-div">
                     <p>Read about me! What I’m like as a software engineer, as a student, as a woman, and as a person.</p>
                   </div>
@@ -44,8 +49,12 @@ class Home extends Component {
               <div className="carousel-item">
                 <div className="carousel-img-div"></div>
                 <div className="carousel-caption d-block">
-                <img src={carouselExperienceImg} className="d-block home-page-img" alt="..." />
-                  <h4 className="title home-carousel-title">Experience</h4>
+                  <Link to="/experiences">
+                    <img src={carouselExperienceImg} className="d-block home-page-img" alt="..." />
+                  </Link>
+                  <Link to="/experiences" className="link home-carousel-link">
+                    <h4 className="title home-carousel-title">Experience</h4>
+                  </Link>
                   <div className="carousel-subTitle-div">
                     <p>Come learn about my work experiences so far! Ranging from part-time jobs to internships.</p>
                   </div>
@@ -54,31 +63,29 @@ class Home extends Component {
               <div className="carousel-item">
                 <div className="carousel-img-div"></div>
                 <div className="carousel-caption d-block">
-                <img src={carouselProjectsImg} className="d-block home-page-img" alt="..." />
-                  <h4 className="title home-carousel-title">Personal Projects</h4>
+                  <Link to="/projects">
+                    <img src={carouselProjectsImg} className="d-block home-page-img" alt="..." />
+                  </Link>
+                  <Link to="/projects" className="link home-carousel-link">
+                    <h4 className="title home-carousel-title">Personal Projects</h4>
+                  </Link>
                   <div className="carousel-subTitle-div">
                     <p>Here I present details about some of the personal projects I’ve done. Mostly technical, but others too!</p>
                   </div>
                 </div>
               </div>
-              {/* <div className="carousel-item">
-                <div className="carousel-img-div"></div>
-                <div className="carousel-caption d-block">
-                <img src="https://drive.google.com/uc?/export=view&id=1E-adWEJKzrRwKRTcvKIFvLiMpflAhDnm" className="d-block home-page-img" alt="..." />
-                  <h4 className="title home-carousel-title">Achievements</h4>
-                  <div className="carousel-subTitle-div">
-                    <p>Proud to present my achievements throughout life that have encouraged me to strive higher.</p>
-                  </div>
-                </div>
-              </div> */}
               <div className="carousel-item">
                 <div className="carousel-img-div"></div>
                 <div className="carousel-caption d-block">
-                <img src={carouselBlogImg} className="d-block home-page-img" alt="..." />
-                <h4 className="title home-carousel-title">Personal Blog</h4>
-                <div className="carousel-subTitle-div">
-                  <p>Just a safe space to express myself. Hope it's thought-provoking and entertaining for you!</p>
-                </div>
+                  <Link to="/blog">
+                    <img src={carouselBlogImg} className="d-block home-page-img" alt="..." />
+                  </Link>
+                  <Link to="/blog" className="link home-carousel-link">
+                  <h4 className="title home-carousel-title">Personal Blog</h4>
+                  </Link>
+                  <div className="carousel-subTitle-div">
+                    <p>Just a safe space to express myself. Hope it's thought-provoking and entertaining for you!</p>
+                  </div>
                 </div>
               </div>
             </div>
