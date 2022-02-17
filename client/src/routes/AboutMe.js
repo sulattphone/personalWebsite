@@ -151,7 +151,7 @@ class AboutMe extends Component {
                   <br />
                   <div className="about-main-achievement-div">
                     <h3>
-                      Achievements
+                      Activities & Acheivements
                     </h3>
                     <div className="achievements-div">
                       <div className="row row-fix justify-content-center">
